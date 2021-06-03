@@ -155,13 +155,13 @@ $.getJSON('https://mauguemu.github.io/Datos_tarea_2/cuadrantes/cuadrantes_centro
   
 });
 
-// Capa raster ortofoto
-var Orto_foto2017 = L.imageOverlay("https://geos0.snitcr.go.cr/cgi-bin/web?map=ortofoto.map&version=1.1.1", 
+// Capa raster hoja cartografica
+var Orto_foto2017 = L.imageOverlay("https://mauguemu.github.io/Datos_tarea_2/raster/mapa.tif", 
 	[[-83.043179923, -83.014604864], 
 	[10.006521201, 9.983327509]], 
 	{opacity:0.5}
 ).addTo(mapa);
-control_capas.addOverlay(Orto_foto2017, 'Ortofoto 2017');
+control_capas.addOverlay(Orto_foto2017, 'Hoja Cartográfica');
 
 function updateOpacity() {
   document.getElementById("span-opacity").innerHTML = document.getElementById("sld-opacity").value;
